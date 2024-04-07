@@ -33,11 +33,18 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'react-refresh', 'prettier'],
   rules: {
+    'import/prefer-default-export': 'off',
+    'react/function-component-definition': [
+      2,
+      { namedComponents: 'arrow-function' },
+    ],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
     'react/react-in-jsx-scope': 0,
+    'react-hooks/rules-of-hooks': 'error', // Check's rules of Hooks
+    'react-hooks/exhaustive-deps': 'warn', // Check's effect dependencies
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -55,5 +62,7 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'react/jsx-key': ['error', { checkFragmentShorthand: true }],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };

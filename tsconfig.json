@@ -18,8 +18,36 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    //
+    "rootDir": ".",
+    "baseUrl": "./src",
+    "paths": {
+      "@assets": ["assets"],
+      "@assets/*": ["assets/*"],
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@configs": ["configs"],
+      "@configs/*": ["configs/*"],
+      "@context": ["context"],
+      "@context/*": ["context/*"],
+      "@hooks": ["hooks"],
+      "@hooks/*": ["hooks/*"],
+      "@pages": ["pages"],
+      "@pages/*": ["pages/*"],
+      "@providers": ["providers"],
+      "@providers/*": ["providers/*"],
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"]
+    }
   },
-  "include": [".eslintrc.cjs", "commitlint.config.cjs", "src"],
+  "include": [
+    ".eslintrc.cjs",
+    "commitlint.config.cjs",
+    "vite.config.ts",
+    "src"
+  ],
+  "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
