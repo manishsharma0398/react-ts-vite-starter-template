@@ -5,4 +5,5 @@ dist
 
 # Ignore all HTML files:
 **/*.html
-.pnpm-lock.yaml
+pnpm-lock.yaml
+tsconfig.json
